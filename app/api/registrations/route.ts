@@ -2,23 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 
-const resendApiKey = process.env.RESEND_API_KEY;
-const resendFromEmail = process.env.RESEND_FROM_EMAIL as string;
-const notificationEmails = process.env.REGISTRATION_NOTIFICATION_EMAILS as string;
-
-if (!resendApiKey) {
-  throw new Error("Missing RESEND_API_KEY");
-}
-
-if (!resendFromEmail) {
-  throw new Error("Missing RESEND_FROM_EMAIL");
-}
-
-if (!notificationEmails) {
-  throw new Error("Missing REGISTRATION_NOTIFICATION_EMAILS");
-}
-
-const resend = new Resend(resendApiKey);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
@@ -66,41 +50,36 @@ export async function POST(request: Request) {
       );
     }
 
-    const internalRecipients = notificationEmails
-      .split(",")
-      .map((item) => item.trim())
-      .filter(Boolean);
-
     await resend.emails.send({
-      from: resendFromEmail,
+      from: process.env.RESEND_FROM_EMAIL as string,
       to: email,
       subject: `Bekräftelse på din anmälan - ${selectedEvent}`,
       html: `
         <h2>Tack för din anmälan, ${name}!</h2>
         <p>Vi har tagit emot din anmälan till <strong>${selectedEvent}</strong>.</p>
-        <p>Vi återkommer snart med bekräftelse och praktisk information.</p>
-        <p>Vänliga hälsningar<br />AI-verkstan</p>
+        <p>Vi återkommer snart med mer information.</p>
       `,
     });
 
     await resend.emails.send({
-      from: resendFromEmail,
-      to: internalRecipients,
+      from: process.env.RESEND_FROM_EMAIL as string,
+      to: [
+        "info@aiverkstan.nu",
+        "jasmine.dahlberg@axontech.se",
+        "sandra@brusetkommunikation.se",
+      ],
       subject: `Ny anmälan - ${selectedEvent}`,
       html: `
-        <h2>Ny anmälan har kommit in</h2>
-        <ul>
-          <li><strong>Tillfälle:</strong> ${selectedEvent}</li>
-          <li><strong>Namn:</strong> ${name}</li>
-          <li><strong>E-post:</strong> ${email}</li>
-          <li><strong>Telefon:</strong> ${phone || "-"}</li>
-          <li><strong>Företag:</strong> ${company}</li>
-          <li><strong>Organisationsnummer:</strong> ${orgNumber || "-"}</li>
-          <li><strong>Fakturamejl:</strong> ${invoiceEmail || "-"}</li>
-          <li><strong>Referens:</strong> ${reference || "-"}</li>
-          <li><strong>Antal deltagare:</strong> ${participants || "-"}</li>
-          <li><strong>Meddelande:</strong> ${message || "-"}</li>
-        </ul>
+        <h2>Ny anmälan</h2>
+        <p><strong>Namn:</strong> ${name}</p>
+        <p><strong>E-post:</strong> ${email}</p>
+        <p><strong>Telefon:</strong> ${phone || "-"}</p>
+        <p><strong>Företag:</strong> ${company}</p>
+        <p><strong>Organisationsnummer:</strong> ${orgNumber || "-"}</p>
+        <p><strong>Fakturamejl:</strong> ${invoiceEmail || "-"}</p>
+        <p><strong>Referens:</strong> ${reference || "-"}</p>
+        <p><strong>Antal deltagare:</strong> ${participants || "-"}</p>
+        <p><strong>Meddelande:</strong> ${message || "-"}</p>
       `,
     });
 
