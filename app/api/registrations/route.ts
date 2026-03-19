@@ -78,14 +78,14 @@ export async function POST(request: Request) {
                 Vi har tagit emot din anmälan och ser fram emot att välkomna dig till AI-verkstan.
               </p>
 
-              <div style="margin:26px 0; padding:22px 22px; background:linear-gradient(135deg,#e0b41e 0%, #f2cf60 100%); border-radius:20px;">
-                <p style="margin:0; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#4a3a00; font-family:Arial, sans-serif;">
-                  Din bokning
-                </p>
-                <p style="margin:8px 0 0 0; font-size:24px; line-height:1.35; font-weight:700; color:#2f2f2f; font-family:Arial, sans-serif;">
-                  ${selectedEvent}
-                </p>
-              </div>
+          <div style="margin:26px 0; padding:22px 22px; background:linear-gradient(135deg,#e0b41e 0%, #f2cf60 100%); border-radius:20px;">
+  <p style="margin:0 0 10px 0; font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#5c4500; font-weight:700; font-family:Arial, sans-serif;">
+    Din bokning
+  </p>
+  <p style="margin:0; font-size:30px; line-height:1.25; font-weight:800; color:#2a2a2a; font-family:Arial, sans-serif;">
+    ${selectedEvent}
+  </p>
+</div>
 
               <p style="margin:0 0 22px 0; font-size:16px; line-height:1.8; color:#dddddd; font-family:Arial, sans-serif;">
                 Din plats är nu säkrad. Inom kort får du ett mejl med all praktisk information inför dagen.
@@ -257,7 +257,7 @@ export async function POST(request: Request) {
       to: [
         "info@aiverkstan.nu",
         "jasmine.dahlberg@axontech.se",
-        "sandra@brusetkommunikation.se",
+     
       ],
       subject: `Ny anmälan - ${selectedEvent}`,
       html: internalHtml,
