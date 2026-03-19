@@ -55,9 +55,65 @@ export async function POST(request: Request) {
       to: email,
       subject: `Bekräftelse på din anmälan - ${selectedEvent}`,
       html: `
-        <h2>Tack för din anmälan, ${name}!</h2>
-        <p>Vi har tagit emot din anmälan till <strong>${selectedEvent}</strong>.</p>
-        <p>Vi återkommer snart med mer information.</p>
+        <div style="margin:0; padding:0; background-color:#f4f1ea;">
+          <div style="max-width:640px; margin:0 auto; padding:40px 20px;">
+            <div style="background-color:#4a4a4a; border-radius:24px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.12);">
+              <div style="padding:40px 32px 24px 32px; text-align:center; border-bottom:1px solid rgba(255,255,255,0.08);">
+                <p style="margin:0; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#b7d9b2; font-family:Arial, sans-serif;">
+                  AI-verkstan
+                </p>
+                <h1 style="margin:16px 0 0 0; font-size:32px; line-height:1.2; color:#ffffff; font-family:Arial, sans-serif;">
+                  Tack för din anmälan
+                </h1>
+              </div>
+
+              <div style="padding:32px;">
+                <p style="margin:0 0 16px 0; font-size:16px; line-height:1.7; color:#f3f3f3; font-family:Arial, sans-serif;">
+                  Hej ${name},
+                </p>
+
+                <p style="margin:0 0 16px 0; font-size:16px; line-height:1.7; color:#dddddd; font-family:Arial, sans-serif;">
+                  Vi har tagit emot din anmälan till
+                  <strong style="color:#ffffff;">${selectedEvent}</strong>.
+                </p>
+
+                <p style="margin:0 0 24px 0; font-size:16px; line-height:1.7; color:#dddddd; font-family:Arial, sans-serif;">
+                  Vi återkommer snart med bekräftelse och praktisk information.
+                </p>
+
+                <div style="margin:24px 0; padding:24px; background-color:#5a5a5a; border-radius:20px;">
+                  <h2 style="margin:0 0 16px 0; font-size:18px; color:#ffffff; font-family:Arial, sans-serif;">
+                    Dina uppgifter
+                  </h2>
+
+                  <table role="presentation" style="width:100%; border-collapse:collapse;">
+                    <tr>
+                      <td style="padding:8px 0; font-size:14px; color:#b7d9b2; font-family:Arial, sans-serif;">Namn</td>
+                      <td style="padding:8px 0; font-size:14px; color:#ffffff; text-align:right; font-family:Arial, sans-serif;">${name}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:8px 0; font-size:14px; color:#b7d9b2; font-family:Arial, sans-serif;">E-post</td>
+                      <td style="padding:8px 0; font-size:14px; color:#ffffff; text-align:right; font-family:Arial, sans-serif;">${email}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:8px 0; font-size:14px; color:#b7d9b2; font-family:Arial, sans-serif;">Företag</td>
+                      <td style="padding:8px 0; font-size:14px; color:#ffffff; text-align:right; font-family:Arial, sans-serif;">${company}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:8px 0; font-size:14px; color:#b7d9b2; font-family:Arial, sans-serif;">Antal deltagare</td>
+                      <td style="padding:8px 0; font-size:14px; color:#ffffff; text-align:right; font-family:Arial, sans-serif;">${participants || "-"}</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <p style="margin:0; font-size:16px; line-height:1.7; color:#dddddd; font-family:Arial, sans-serif;">
+                  Vänliga hälsningar,<br />
+                  <span style="color:#ffffff; font-weight:700;">AI-verkstan</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       `,
     });
 
@@ -70,16 +126,67 @@ export async function POST(request: Request) {
       ],
       subject: `Ny anmälan - ${selectedEvent}`,
       html: `
-        <h2>Ny anmälan</h2>
-        <p><strong>Namn:</strong> ${name}</p>
-        <p><strong>E-post:</strong> ${email}</p>
-        <p><strong>Telefon:</strong> ${phone || "-"}</p>
-        <p><strong>Företag:</strong> ${company}</p>
-        <p><strong>Organisationsnummer:</strong> ${orgNumber || "-"}</p>
-        <p><strong>Fakturamejl:</strong> ${invoiceEmail || "-"}</p>
-        <p><strong>Referens:</strong> ${reference || "-"}</p>
-        <p><strong>Antal deltagare:</strong> ${participants || "-"}</p>
-        <p><strong>Meddelande:</strong> ${message || "-"}</p>
+        <div style="margin:0; padding:0; background-color:#f4f1ea;">
+          <div style="max-width:640px; margin:0 auto; padding:40px 20px;">
+            <div style="background-color:#4a4a4a; border-radius:24px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.12);">
+              <div style="padding:40px 32px 24px 32px; border-bottom:1px solid rgba(255,255,255,0.08);">
+                <p style="margin:0; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#b7d9b2; font-family:Arial, sans-serif;">
+                  Ny anmälan
+                </p>
+                <h1 style="margin:16px 0 0 0; font-size:30px; line-height:1.2; color:#ffffff; font-family:Arial, sans-serif;">
+                  ${selectedEvent}
+                </h1>
+              </div>
+
+              <div style="padding:32px;">
+                <p style="margin:0 0 24px 0; font-size:16px; line-height:1.7; color:#dddddd; font-family:Arial, sans-serif;">
+                  En ny anmälan har kommit in via formuläret.
+                </p>
+
+                <div style="padding:24px; background-color:#5a5a5a; border-radius:20px;">
+                  <table role="presentation" style="width:100%; border-collapse:collapse;">
+                    <tr>
+                      <td style="padding:10px 0; font-size:14px; color:#b7d9b2; font-family:Arial, sans-serif;">Namn</td>
+                      <td style="padding:10px 0; font-size:14px; color:#ffffff; text-align:right; font-family:Arial, sans-serif;">${name}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0; font-size:14px; color:#b7d9b2; font-family:Arial, sans-serif;">E-post</td>
+                      <td style="padding:10px 0; font-size:14px; color:#ffffff; text-align:right; font-family:Arial, sans-serif;">${email}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0; font-size:14px; color:#b7d9b2; font-family:Arial, sans-serif;">Telefon</td>
+                      <td style="padding:10px 0; font-size:14px; color:#ffffff; text-align:right; font-family:Arial, sans-serif;">${phone || "-"}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0; font-size:14px; color:#b7d9b2; font-family:Arial, sans-serif;">Företag</td>
+                      <td style="padding:10px 0; font-size:14px; color:#ffffff; text-align:right; font-family:Arial, sans-serif;">${company}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0; font-size:14px; color:#b7d9b2; font-family:Arial, sans-serif;">Org.nr</td>
+                      <td style="padding:10px 0; font-size:14px; color:#ffffff; text-align:right; font-family:Arial, sans-serif;">${orgNumber || "-"}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0; font-size:14px; color:#b7d9b2; font-family:Arial, sans-serif;">Fakturamejl</td>
+                      <td style="padding:10px 0; font-size:14px; color:#ffffff; text-align:right; font-family:Arial, sans-serif;">${invoiceEmail || "-"}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0; font-size:14px; color:#b7d9b2; font-family:Arial, sans-serif;">Referens</td>
+                      <td style="padding:10px 0; font-size:14px; color:#ffffff; text-align:right; font-family:Arial, sans-serif;">${reference || "-"}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0; font-size:14px; color:#b7d9b2; font-family:Arial, sans-serif;">Deltagare</td>
+                      <td style="padding:10px 0; font-size:14px; color:#ffffff; text-align:right; font-family:Arial, sans-serif;">${participants || "-"}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0; font-size:14px; color:#b7d9b2; font-family:Arial, sans-serif; vertical-align:top;">Meddelande</td>
+                      <td style="padding:10px 0; font-size:14px; color:#ffffff; text-align:right; font-family:Arial, sans-serif;">${message || "-"}</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       `,
     });
 
