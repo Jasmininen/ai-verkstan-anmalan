@@ -187,33 +187,7 @@ className="mt-4 inline-block text-sm font-medium text-[#d8d8d8] underline underl
             </div>
           </section>
 
-          <section className="mx-auto mt-20 max-w-4xl border-t border-[#5a5a5a] pt-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#b7d9b2]">
-              Känner du igen dig?
-            </p>
-<h2 className="mt-4 text-3xl font-semibold leading-tight text-white md:text-4xl">
-  AI är en del av din vardag.
-  <br />
-  Men det skapar ännu inte riktig effekt.
-</h2>
-
-            <div className="mt-8 space-y-5 text-lg leading-8 text-[#e7e7e7]">
-<p>Du använder redan AI i någon form.</p>
-              <p>Men i verkligheten blir det ofta så här:</p>
-            </div>
-
-           <ul className="space-y-3 text-[#e7e7e7]">
-  <li>Det blir spretigt</li>
-  <li>Det sparar inte så mycket tid som du hoppats</li>
-  <li>Du vet att potentialen finns – men inte hur du får ut den</li>
-  <li>Det saknas struktur i hur du använder AI</li>
-</ul>
-
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-white">
-              Det är inte du som gör fel. Du saknar bara ett sätt att använda AI
-              som faktiskt fungerar i vardagen.
-            </p>
-          </section>
+        
 
 
           <section className="mx-auto mt-20 max-w-4xl border-t border-[#5a5a5a] pt-10">
