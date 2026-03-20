@@ -215,92 +215,6 @@ className="mt-4 inline-block text-sm font-medium text-[#d8d8d8] underline underl
             </p>
           </section>
 
-<section className="mx-auto mt-16 max-w-4xl pt-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#b7d9b2]">
-              Förflyttningen
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold leading-tight text-white md:text-4xl">
-  Ett mer strukturerat sätt att arbeta
-</h2>
-
-          <p className="mt-6 text-[#e7e7e7]">
-  Det här handlar inte om fler verktyg.
-  <br />
-  Det handlar om att arbeta på ett sätt som håller – även när tempot är högt.
-</p>
-
-            <div className="mt-10 grid gap-4 md:grid-cols-2">
-<div className="rounded-[20px] bg-[#444444] p-6">
-                  <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#b7d9b2]">
-                  Du går från
-                </p>
-                <ul className="mt-4 space-y-3 text-base leading-7 text-[#f4f4f4]">
-                  <li>• testande utan riktning</li>
-                  <li>• manuellt jobb och stress</li>
-                  <li>• många idéer men låg effekt</li>
-                </ul>
-              </div>
-
-<div className="rounded-[20px] bg-[#444444] p-6">
-                  <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#b7d9b2]">
-                  Till
-                </p>
-                <ul className="mt-4 space-y-3 text-base leading-7 text-[#f4f4f4]">
-                  <li>• struktur och tydlighet</li>
-                  <li>• smart stöd i vardagen</li>
-                  <li>• konkret affärsnytta</li>
-                </ul>
-              </div>
-            </div>
-
-            <ul className="mt-10 space-y-4 text-base leading-7 text-[#f4f4f4] sm:text-lg">
-              <li>• Du vet exakt hur AI kan användas i din verksamhet</li>
-              <li>• Du får ett konkret arbetssätt som kan spara tid direkt</li>
-              <li>• Du blir tydligare i vad som faktiskt driver affär</li>
-              <li>• Du börjar bygga ett digitalt stöd som faktiskt avlastar</li>
-            </ul>
-          </section>
-
-<section className="mx-auto mt-20 max-w-4xl border-t border-[#5a5a5a] pt-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#b7d9b2]">
-              Reflektioner från tidigare workshop
-            </p>
-
-           <h2 className="mt-4 text-3xl font-semibold leading-tight text-white md:text-4xl">
-  Det märks direkt i arbetet
-</h2>
-<p className="mt-4 text-[#cfcfcf]">
-  Erfarenheter från tidigare workshops
-</p>
-
-            <div className="mt-10 space-y-5">
-<blockquote className="pl-1 text-2xl italic leading-9 text-[#f4f4f4]">
-                  “Min tröskel för att använda AI har sänkts rejält.”
-              </blockquote>
-
-<blockquote className="pl-1 text-2xl italic leading-9 text-[#f4f4f4]">
-                  “Nu känner jag att jag faktiskt kan börja.”
-              </blockquote>
-
-
-<blockquote className="pl-1 text-2xl italic leading-9 text-[#f4f4f4]">
-                  “Små steg kan skapa värde direkt.”
-              </blockquote>
-
-<blockquote className="pl-1 text-2xl italic leading-9 text-[#f4f4f4]">
-                  “Jag ser tydligt hur vi kan spara tid.”
-              </blockquote>
-
-<blockquote className="pl-1 text-2xl italic leading-9 text-[#f4f4f4]">
-                  “Vi började bygga en AI-assistent direkt.”
-              </blockquote>
-            </div>
-
-            <p className="mt-8 text-lg leading-8 text-white">
-              Det här är inte teori. Det är ett nytt sätt att arbeta.
-            </p>
-          </section>
 
           <section className="mx-auto mt-20 max-w-4xl border-t border-[#5a5a5a] pt-10">
            <h2 className="mt-4 text-3xl font-semibold leading-tight text-white md:text-4xl">
@@ -339,27 +253,7 @@ className="mt-4 inline-block text-sm font-medium text-[#d8d8d8] underline underl
             </div>
           </section>
 
-          <section className="mx-auto mt-20 max-w-4xl border-t border-[#5a5a5a] pt-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#b7d9b2]">
-              För vem?
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold leading-tight text-white md:text-4xl">
-  För dig som vill ta nästa steg
-</h2>
-            <ul className="mt-8 space-y-4 text-base leading-7 text-[#f4f4f4] sm:text-lg">
-              <li>• har testat AI men inte fått riktig effekt ännu</li>
-              <li>• vill jobba smartare, inte bara mer</li>
-              <li>• vill ha struktur och riktning i verksamheten</li>
-              <li>• vill använda AI på ett konkret sätt i ditt eget företag</li>
-            </ul>
-
-            <p className="mt-8 text-base leading-7 text-[#cfcfcf] sm:text-lg">
-              Det här är inte för dig som är helt ny och bara vill “förstå AI
-              från början”.
-            </p>
-          </section>
-
+       
           <section className="mx-auto mt-20 max-w-4xl border-t border-[#5a5a5a] pt-10">
             <div className="grid gap-8 md:grid-cols-2">
               <div>
