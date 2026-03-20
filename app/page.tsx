@@ -99,14 +99,10 @@ className="mx-auto mb-10 mt-4 w-[280px] sm:w-[340px] md:w-[400px]"/>
 
           
 
-<h1 className="mx-auto max-w-3xl text-5xl font-light leading-[1.02] text-white sm:text-6xl md:text-7xl">
-  Du har börjat nosa
-  <br />
-  på AI.
-  <br />
-  Nu är det dags att få
-  <br />
-  affärsvärde på riktigt.
+<h1 className="mx-auto max-w-3xl text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
+  Du har börjat nosa på AI.
+  <br className="hidden sm:block" />
+  Nu är det dags att få affärsvärde på riktigt.
 </h1>
 
            <p className="mx-auto mt-6 max-w-2xl text-base italic leading-7 text-[#d0d0d0] sm:text-lg md:text-xl">
