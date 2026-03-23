@@ -88,25 +88,23 @@ if (!response.ok) {
 
   return (
     <main className="min-h-screen bg-[#3f3f3f] text-white">
-      <div className="mx-auto max-w-[1180px] border-x border-[#d9d9d9]">
-        <section className="px-6 pb-12 pt-20 md:px-10 lg:px-16">
+<div className="mx-auto max-w-[1320px] border-x border-[#d9d9d9]">
+          <section className="px-6 pb-12 pt-20 md:px-10 lg:px-16">
           <div className="mx-auto max-w-5xl text-center">
           
           <img
   src="/logo.png"
   alt="AI-verkstan logga"
-className="mx-auto mb-10 mt-4 w-[280px] sm:w-[340px] md:w-[400px]"/>
+className="mx-auto mb-8 mt-0 w-[220px] sm:w-[280px] md:w-[340px]"/>
 
           
 
-<h1 className="mx-auto max-w-3xl text-4xl font-light leading-tight text-white sm:text-5xl md:text-6xl">
-  Du har börjat nosa på AI.
-  <br className="hidden sm:block" />
-  Nu är det dags att få affärsvärde på riktigt.
+<h1 className="mx-auto mt-2 max-w-5xl text-center text-4xl font-light leading-[1.08] text-white sm:text-5xl md:text-6xl lg:text-7xl">
+  Du har börjat nosa på AI. Nu är det dags att få affärsvärde på riktigt.
 </h1>
 
-           <p className="mx-auto mt-6 max-w-2xl text-base italic leading-7 text-[#d0d0d0] sm:text-lg md:text-xl">
-  En praktisk heldag för småföretagare som vill gå från nyfiken användning
+<p className="mx-auto mt-5 max-w-3xl text-base italic leading-7 text-[#d0d0d0] sm:text-lg md:text-xl">
+    En praktisk heldag för småföretagare som vill gå från nyfiken användning
   till struktur, tidsvinst och konkret nytta i vardagen.
 </p>
 
